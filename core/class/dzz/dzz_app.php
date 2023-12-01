@@ -169,7 +169,7 @@ class dzz_app extends dzz_base{
             $sitepath = preg_replace("/\/archiver/i", '', $sitepath);
         }
         $_G['isHTTPS'] = $this->is_HTTPS();//($_SERVER['HTTPS'] && strtolower($_SERVER['HTTPS']) != 'off') ? true : false;
-        $_G['siteurl'] = dhtmlspecialchars('http'.($_G['isHTTPS'] ? 's' : '').'://'.$_SERVER['HTTP_HOST'].$sitepath.'/');
+        $_G['siteurl'] = dhtmlspecialchars('http'.($_G['isHTTPS'] ? 's' : 's').'://'.$_SERVER['HTTP_HOST'].$sitepath.'/');
 
         $url = parse_url($_G['siteurl']);
         $_G['siteroot'] = isset($url['path']) ? $url['path'] : '';
